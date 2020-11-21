@@ -1,0 +1,96 @@
+* {
+  box-sizing: border-box;
+}
+
+::-moz-selection { /* Code for Firefox */
+  color: red;
+  background: yellow;
+}
+
+::selection {
+  color: red;
+  background: yellow;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;1,900&display=swap');
+
+body {
+  display: flex;
+  margin: 0;
+  height: calc(100vh);
+  padding: 5em 0 10em;
+  flex-direction: column;
+  justify-content: center;
+  font-family: 'Raleway', sans-serif;
+  line-height: 1.8em;
+  text-align: center;
+  color: white;
+  background: rgb(131,58,180);
+  background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+}
+
+h1, h2, h3, h4, h5 {
+  font-style: italic;
+  font-weight: 900;
+}
+
+h1 {
+  font-size: 83px;
+  line-height: 100px;
+  text-shadow: 7px 7px 0 tomato;
+  margin-bottom: 50px;
+}
+
+p {
+  margin: auto auto 15px;
+  max-width: 430px;
+}
+
+a.btn {
+  position: relative;
+  display: inline-block;
+  margin: 20px auto;
+  height: 50px;
+  line-height: 50px;
+  width: 230px;
+  font-size: 15px;
+  border: 2px solid #ffffff;
+  border-radius: 25px;
+  background-color: transparent;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+a.btn:hover {
+  background-color: tomato;
+}
+
+/* 
+button:hover:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  mix-blend-mode: overlay;
+} */
+
+button:hover span {
+  color: tomato;
+}
+
+.top-menu {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  top: 0;
+  padding: 1em 2em;
+  right: 0;
+}
+
+.top-menu a {
+  color: white;
+}
