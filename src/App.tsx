@@ -18,7 +18,7 @@ class App extends React.PureComponent {
       <div className="top-menu">
         <Link to="/">
           <svg height="100" width="100">
-            <circle cx="22" cy="22" r="20" stroke="white" stroke-width="3" fill="tomato" />
+            <circle cx="22" cy="22" r="20" stroke="white" strokeWidth="3" fill="tomato" />
           </svg> 
         </Link>
         <Link to="/how-to-use">how to use?</Link>
