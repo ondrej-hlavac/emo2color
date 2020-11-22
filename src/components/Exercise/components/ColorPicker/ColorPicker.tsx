@@ -22,12 +22,10 @@ const vodovky: string[] = [
 
 const ColorPicker = ({addColor}: IProps) => {
   return (
-    <div>
-      <div className="color-picker-palette">
-        {vodovky.map((color: string) => {
-          return <PickerButton addColor={addColor} color={color} key={`key${color}`}/>;
-        })}
-      </div>
+    <div className="color-picker-palette">
+      {vodovky.map((color: string) => {
+        return <PickerButton addColor={addColor} color={color} key={`key${color}`}/>;
+      })}
     </div>
   );
 };
