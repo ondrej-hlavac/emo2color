@@ -1,7 +1,8 @@
 import React from 'react';
+import { IColorObj } from '../../../../interfaces/IColorObj';
 
 interface IProps {
-  colors: any[];
+  colors: IColorObj[];
 }
 
 const PickedColors = ({ colors }: IProps) => {
@@ -9,7 +10,7 @@ const PickedColors = ({ colors }: IProps) => {
     <div>
       {
         colors.map((color) => {
-          return <span>{JSON.stringify(color)}</span>;
+          return <span key={`key_vypis_${color.time}`}>{JSON.stringify(color)}</span>;
         })
       }
     </div>

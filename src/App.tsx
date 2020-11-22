@@ -7,13 +7,12 @@ import {
 } from "react-router-dom";
 import Home from './components/Home';
 import Exercise from './components/Exercise';
+import HowTo from './components/HowTo';
 
 import './styles/main.css';
 
-class App extends React.PureComponent {
-	render() {
-		return (
-      
+const App = () => {
+  return (
     <Router>
       <div className="top-menu">
         <Link to="/">
@@ -28,19 +27,14 @@ class App extends React.PureComponent {
           <Exercise />
         </Route>
         <Route path="/how-to-use">
-          <div>
-            <h1>
-              how to use Emo2color?
-            </h1>
-          </div>
+          <HowTo />
         </Route>
         <Route path="/">
           <Home />
         </Route>
       </Switch>
     </Router>
-		);
-	}
+  );
 }
 
 export default App;

@@ -1,17 +1,13 @@
 import React, { useState } from 'react';
 import ColorPicker from './components/ColorPicker';
 import PickedColors from './components/PickedColors';
-
-interface IPickedColor {
-  color: string;
-  time: number;
-}
+import { IColorObj } from '../../interfaces/IColorObj';
 
 const Exercise = () => {
-  const [pickedColors, setPickedColors] = useState<IPickedColor[]>([]);
+  const [pickedColors, setPickedColors] = useState<IColorObj[]>([]);
 
   const addColor = (color: string) => {
-    const ColorInTime: IPickedColor = {
+    const ColorInTime: IColorObj = {
       color: color,
       time: Date.now(),
     }
