@@ -5,5 +5,5 @@ export const StyledExercisePage = styled.article`
     width: 100vw;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-end;
 `; 

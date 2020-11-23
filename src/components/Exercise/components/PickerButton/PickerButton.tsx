@@ -9,7 +9,7 @@ interface IProps {
 const PickerButton = ({color, addColor}: IProps) => {
   return (
     <StyledPickerButton type="button" onClick={() => addColor(color)}>
-      <div style={{backgroundColor: color, width: 100, height: 100}} />
+      <div style={{backgroundColor: color, width: 70, height: 70}} />
     </StyledPickerButton>
   )
 };
