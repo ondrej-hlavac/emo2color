@@ -1,10 +1,12 @@
 import styled from 'styled-components';
 
+export const BORDER_WIDTH = '4px';
+
 export const StyledPickerButton = styled.button`
-  width: 70px;
+  width: calc(${BORDER_WIDTH} * 2 + 70px);
   height: 70px;
   padding: 0;
   margin: auto;
-  border: 4px solid #000;
+  border: ${BORDER_WIDTH} solid #000;
   background-color: #000;
 `;

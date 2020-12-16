@@ -2,7 +2,8 @@
   box-sizing: border-box;
 }
 
-::-moz-selection { /* Code for Firefox */
+::-moz-selection {
+  /* Code for Firefox */
   color: red;
   background: yellow;
 }
@@ -12,7 +13,7 @@
   background: yellow;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;1,900&display=swap");
 
 body {
   display: flex;
@@ -21,15 +22,24 @@ body {
   padding: O;
   flex-direction: column;
   justify-content: center;
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   line-height: 1.8em;
   text-align: center;
   color: white;
-  background: rgb(131,58,180);
-  background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+  background: rgb(131, 58, 180);
+  background: linear-gradient(
+    90deg,
+    rgba(131, 58, 180, 1) 0%,
+    rgba(253, 29, 29, 1) 50%,
+    rgba(252, 176, 69, 1) 100%
+  );
 }
 
-h1, h2, h3, h4, h5 {
+h1,
+h2,
+h3,
+h4,
+h5 {
   font-style: italic;
   font-weight: 900;
 }
@@ -121,4 +131,19 @@ button:hover span {
 
 .how-to-wrapper h1 {
   line-height: 60px;
+}
+
+/* TODO: firefox & edge workaround */
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #f5f5f5;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  background-color: #f5f5f5;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #000000;
 }
