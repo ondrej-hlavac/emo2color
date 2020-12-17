@@ -1,21 +1,19 @@
-import React, { useCallback } from "react";
-import { IColorObj } from "../../../../interfaces/IColorObj";
+import React, { useCallback, useContext } from "react";
 import { StyledPickedColors } from "../../../styled/lib/StyledPickedColors";
+import { Context as ColorsContext } from "../../../../context/ColorsContext";
 
-interface IProps {
-  colors: IColorObj[];
-}
+const PickedColors = () => {
+  const { exerciseColors } = useContext(ColorsContext);
 
-const PickedColors = ({ colors }: IProps) => {
   const newColor = useCallback(() => {
-    const lastColObj = colors[colors.length - 1];
+    const lastColObj = exerciseColors[exerciseColors.length - 1];
     const colorHex = lastColObj && lastColObj.color;
     if (colorHex) {
       return colorHex;
     }
 
     return "#ffffff";
-  }, [colors]);
+  }, [exerciseColors]);
 
   return (
     <StyledPickedColors>

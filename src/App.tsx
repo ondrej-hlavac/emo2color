@@ -5,28 +5,31 @@ import Exercise from "./components/Exercise";
 import HowTo from "./components/HowTo";
 import TopMenu from "./components/TopMenu/TopMenu";
 import Results from "./components/Results";
-
-import "./styles/main.css";
+import { StyledGlobalStyles } from "./components/styled/StyledGlobalStyles";
+import ContextProvider from "./context/ContextProvider";
 
 const App = () => {
   return (
-    <Router>
-      <TopMenu />
-      <Switch>
-        <Route path="/exercise">
-          <Exercise />
-        </Route>
-        <Route path="/how-to-use">
-          <HowTo />
-        </Route>
-        <Route path="/results">
-          <Results />
-        </Route>
-        <Route path="/">
-          <Home />
-        </Route>
-      </Switch>
-    </Router>
+    <ContextProvider>
+      <StyledGlobalStyles />
+      <Router>
+        <TopMenu />
+        <Switch>
+          <Route path="/exercise">
+            <Exercise />
+          </Route>
+          <Route path="/how-to-use">
+            <HowTo />
+          </Route>
+          <Route path="/results">
+            <Results />
+          </Route>
+          <Route path="/">
+            <Home />
+          </Route>
+        </Switch>
+      </Router>
+    </ContextProvider>
   );
 };
 

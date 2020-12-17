@@ -1,4 +1,4 @@
 export interface IColorObj {
   color: string;
-  time: number;
+  time: string | number;
 }

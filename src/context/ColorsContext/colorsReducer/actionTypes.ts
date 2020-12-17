@@ -1,0 +1,1 @@
+export const ADD_EXERCISE_COLOR = 'ADD_EXERCISE_COLOR';
