@@ -11,13 +11,16 @@ const BottomNavigation = () => {
       return (
         <StyledBottomNavigation>
           <Link className="bottom-nav-button" to={routes.RESULTS}>
-            End practice
+            End Practice
           </Link>
         </StyledBottomNavigation>
       );
     case routes.RESULTS:
       return (
         <StyledBottomNavigation>
+          <a href="#" className="bottom-nav-button">
+            start new
+          </a>
           <Link className="bottom-nav-button" to={routes.EXERCISE}>
             Back to exercise
           </Link>
