@@ -1,6 +1,6 @@
 import React from "react";
-import { StyledResultsPage } from "../styled/lib/StyledResultsPage";
 import ResultsWidgets from "./components/ResultsWidgets";
+import { StyledResultsPage } from "../styled/lib/StyledResultsPage";
 
 const Results = () => {
   return (

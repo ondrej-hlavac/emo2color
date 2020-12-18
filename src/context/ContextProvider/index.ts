@@ -1,1 +1,2 @@
-export { default, IContextProps } from './ContextProvider';
+export { default } from './ContextProvider';
+export { IContextProps } from './IContextProps';

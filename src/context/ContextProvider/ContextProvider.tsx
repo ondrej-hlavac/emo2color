@@ -1,11 +1,8 @@
-import React, { ReactNode } from "react";
+import React from "react";
 import ColorsContext from "../ColorsContext";
+import { IContextProps } from "./IContextProps";
 
-export interface IContextProps {
-  children: ReactNode;
-}
-
-const ContextProvider = ({ children }: IContextProps) => {
+export const ContextProvider = ({ children }: IContextProps) => {
   return <ColorsContext>{children}</ColorsContext>;
 };
 

@@ -1,8 +1,8 @@
 import React from "react";
 import ColorPicker from "./components/ColorPicker";
 import PickedColors from "./components/PickedColors";
-import { StyledExercisePage } from "../styled/lib/StyledExercisePage";
 import ResultsButton from "./components/ResultsButton";
+import { StyledExercisePage } from "../styled/lib/StyledExercisePage";
 
 const Exercise = () => {
   return (
