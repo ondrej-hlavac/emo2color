@@ -1,24 +1,14 @@
 import styled from 'styled-components';
+import { variables } from '../variables';
 
 export const StyledBottomNavigation = styled.nav`
   position: fixed;
+  display: flex;
+  align-items: space-between;
   bottom: 0;
   left: 0;
+  padding: 1em;
   width: 100%;
-  height: 70px;
-
-  .bottom-nav-button {
-    padding: 1em 3em;
-    border: 1px solid magenta;
-    border-radius: 8px;
-    font-weight: 700;
-    background-color: white;
-    text-transform: uppercase;
-    text-decoration: none;
-
-    &:hover {
-      background-color: magenta;
-      color: white;
-    }
-  }
+  height: ${variables.BOT_NAV_HEIGHT}px;
+  background: ${variables.BACKGROUND_GRADIENT}
 `;

@@ -1,7 +1,9 @@
 import React from "react";
-import { Link, withRouter, useLocation } from "react-router-dom";
+import { withRouter, useLocation } from "react-router-dom";
 import { routes } from "routes";
 import { StyledBottomNavigation } from "components/styled/lib/StyledBottomNavigation";
+// import { Button } from "components/styled/atoms/StyledButton";
+import { Link } from "components/styled/atoms/StyledLink";
 
 const BottomNavigation = () => {
   const { pathname } = useLocation();
@@ -10,20 +12,14 @@ const BottomNavigation = () => {
     case routes.EXERCISE:
       return (
         <StyledBottomNavigation>
-          <Link className="bottom-nav-button" to={routes.RESULTS}>
-            End Practice
-          </Link>
+          <Link to={routes.RESULTS}>End Practice</Link>
         </StyledBottomNavigation>
       );
     case routes.RESULTS:
       return (
         <StyledBottomNavigation>
-          <a href="#" className="bottom-nav-button">
-            start new
-          </a>
-          <Link className="bottom-nav-button" to={routes.EXERCISE}>
-            Back to exercise
-          </Link>
+          {/* <Button>start new</Button> */}
+          <Link to={routes.EXERCISE}>Back to exercise</Link>
         </StyledBottomNavigation>
       );
     default:

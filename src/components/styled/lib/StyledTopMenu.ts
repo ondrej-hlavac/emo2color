@@ -5,8 +5,9 @@ export const StyledTopMenu = styled.div`
     display: flex;
     justify-content: space-between;
     width: 100%;
+    height: 80px;
     top: 0;
-    padding: 1em 2em;
+    padding: 1em 2em 1em 1em;
     right: 0;
 
     a {

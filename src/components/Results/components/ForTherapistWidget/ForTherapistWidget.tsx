@@ -3,6 +3,7 @@ import { StyledColorsList } from "../../../../components/styled/lib/StyledColors
 import { StyledWidgetWrapper } from "../../../styled/lib/StyledWidgetWrapper";
 import { Context as ColorsContext } from "../../../../context/ColorsContext";
 import { IColorObj } from "../../../../interfaces/IColorObj";
+import { format } from "date-fns";
 
 const ListItem = (exerciseColor: any) => {
   // TODO: remove nesting
@@ -17,7 +18,7 @@ const ListItem = (exerciseColor: any) => {
           backgroundColor: color,
         }}
       />
-      <p className="time-column">{time}</p>
+      <p className="time-column">{format(time, "HH:mm _ MMMM do yyyy")}</p>
     </li>
   );
 };
