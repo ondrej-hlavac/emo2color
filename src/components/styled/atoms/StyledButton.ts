@@ -14,6 +14,7 @@ export const Button = styled.button`
   color: #ffffff;
   text-transform: uppercase;
   text-decoration: none;
+  outline: none;
 
   &:hover {
     background-color: tomato;

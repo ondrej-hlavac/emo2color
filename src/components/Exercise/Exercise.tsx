@@ -26,7 +26,7 @@ export enum StepsEnum {
 type TimerType = ReturnType<typeof setTimeout>;
 
 const Exercise = () => {
-  let timer: TimerType | any;
+  let timer: ReturnType<typeof setTimeout> | any;
   const { setCurrentColor } = useContext(ColorsContext);
   const [step, setStep] = useState(StepsEnum.closeEyes);
 
@@ -34,31 +34,28 @@ const Exercise = () => {
     setCurrentColor('#ffffff');
   };
 
-  const confirmColor = () => {
+  const colorConfirmed = () => {
     setStep(StepsEnum.letEmotionFadeAway);
   };
 
   useEffect(() => {
-    console.log('timeout');
-    timer = () =>
-      setTimeout(() => {
-        switch (step) {
-          case StepsEnum.closeEyes:
-            return setStep(StepsEnum.pickColor);
-          case StepsEnum.letEmotionFadeAway:
-            setNoColor();
-            return setStep(StepsEnum.closeEyes);
-        }
-      }, 5000);
-    timer();
-    return clearTimeout(timer);
+    timer = setTimeout(() => {
+      switch (step) {
+        case StepsEnum.closeEyes:
+          return setStep(StepsEnum.pickColor);
+        case StepsEnum.letEmotionFadeAway:
+          setNoColor();
+          return setStep(StepsEnum.closeEyes);
+      }
+    }, 4000);
+    return () => clearTimeout(timer);
   }, [step]);
 
   return (
     <StyledExercisePage>
       <Headline>Exercise</Headline>
       <span>{step}</span>
-      <PickedColors confirmColor={confirmColor} />
+      <PickedColors confirmColor={colorConfirmed} />
       <ColorPicker />
     </StyledExercisePage>
   );
