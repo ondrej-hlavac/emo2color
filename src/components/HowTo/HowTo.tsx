@@ -12,13 +12,13 @@ const HowTo = () => {
         <h3>1) Close your eyes</h3>
       </section>
       <section>
-        <h3>2) Feel the emotion you have right now.</h3>
+        <h3>2) Feel the emotion you have right&nbsp;now.</h3>
       </section>
       <section>
-        <h3>3) Try to pick a color by "taste" of your emotion.</h3>
+        <h3>3) Try to pick a color by "taste" of&nbsp;your&nbsp;emotion.</h3>
       </section>
       <section>
-        <h3>4) Let your emotion go away and repeat step 1.</h3>
+        <h3>4) Let your emotion go away and&nbsp;repeat step&nbsp;1.</h3>
       </section>
       <Link to={routes.EXERCISE}>Start therapy</Link>
     </StyledHowToPage>

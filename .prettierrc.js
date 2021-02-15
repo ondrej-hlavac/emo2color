@@ -1,3 +1,5 @@
+const { transpileModule } = require('typescript');
+
 module.export = {
   "semi": true,
   "printWidth": 140,
@@ -8,5 +10,6 @@ module.export = {
   "useTabs": false,
   "arrowParens": "avoid",
   "jsxSingleQuote": true,
+  "tsxSingleQuote": true,
   "trailingComma": "all"
 }

@@ -1,6 +1,6 @@
 import React from "react";
 import ResultsWidgets from "./components/ResultsWidgets";
-import { StyledResultsPage } from "../styled/lib/StyledResultsPage";
+import { StyledResultsPage } from "../styled/pages/StyledResultsPage";
 import { Headline } from "components/styled/atoms/Headline";
 
 const Results = () => {

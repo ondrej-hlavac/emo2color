@@ -7,7 +7,7 @@
 
 interface IVariables {
   BACKGROUND_GRADIENT: string;
-  BOT_NAV_HEIGHT: number;
+  BOT_NAV_HEIGHT: string;
 }
 
 export const variables: IVariables = {
@@ -18,5 +18,5 @@ export const variables: IVariables = {
       rgba(252, 176, 69, 1) 100%
     );`,
 
-  BOT_NAV_HEIGHT: 90,
+  BOT_NAV_HEIGHT: '90px',
 }

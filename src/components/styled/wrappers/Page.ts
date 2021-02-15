@@ -5,4 +5,5 @@ export const Page = styled.article`
     flex-direction: column;
     justify-content: center;
     min-height: 100vh;
+    padding-bottom: 90px;
 `;

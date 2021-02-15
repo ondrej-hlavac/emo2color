@@ -1,8 +1,11 @@
-import React, { createContext, ReactNode, useReducer } from "react";
-import colorsReducer, { initialState, IReducerState } from "./colorsReducer";
-import { IColorObj } from "interfaces/IColorObj";
-import { ColorClass } from "../../models/Color";
-import { addExerciseColorAction } from "./colorsReducer/actions";
+import React, { createContext, ReactNode, useReducer } from 'react';
+import colorsReducer, { initialState, IReducerState } from './colorsReducer';
+import { IColorObj } from 'interfaces/IColorObj';
+import { ColorClass } from '../../models/Color';
+import {
+  addExerciseColorAction,
+  setCurrentColorAction,
+} from './colorsReducer/actions';
 
 // TODO: interfaces
 interface IProps {
@@ -11,10 +14,12 @@ interface IProps {
 
 interface IContextState {
   addExerciseColor: (exerciseColor: IColorObj) => void;
+  setCurrentColor: (currentColor: string) => void;
 }
 
 const initialContext: IContextState = {
   addExerciseColor: () => {},
+  setCurrentColor: () => {},
 };
 
 type ColorsContextStateType = IContextState & IReducerState;
@@ -32,9 +37,14 @@ const ColorsContext = ({ children }: IProps) => {
     dispatch(addExerciseColorAction(newColor));
   };
 
+  const setCurrentColor = (currentColor: string) => {
+    dispatch(setCurrentColorAction(currentColor));
+  };
+
   const contextValue: ColorsContextStateType = {
     ...reducerState,
     addExerciseColor,
+    setCurrentColor,
   };
 
   return <Context.Provider value={contextValue}>{children}</Context.Provider>;
