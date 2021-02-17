@@ -6,7 +6,7 @@ import { ConfirmColorButton } from 'components/styled/atoms/ColorConfirmButton';
 
 interface IProps {
   confirmColor: () => void;
-  step: string;
+  step: any;
 }
 
 const PickedColors = ({ confirmColor, step }: IProps) => {

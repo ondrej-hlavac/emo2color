@@ -23,7 +23,7 @@ export enum StepsEnum {
   letEmotionFadeAway = 'letEmotionFadeAway',
 }
 
-type TimerType = ReturnType<typeof setTimeout> | number;
+type TimerType = ReturnType<typeof setTimeout> | any;
 
 const Exercise = () => {
   let timer: TimerType;
@@ -39,6 +39,7 @@ const Exercise = () => {
   };
 
   useEffect(() => {
+    console.log('timeout', step);
     timer = setTimeout(() => {
       switch (step) {
         case StepsEnum.closeEyes:
@@ -46,12 +47,15 @@ const Exercise = () => {
         case StepsEnum.letEmotionFadeAway:
           setNoColor();
           return setStep(StepsEnum.closeEyes);
+        default:
+          setNoColor();
+          return null;
       }
     }, 5500);
     return () => {
-      setStep(StepsEnum.closeEyes);
+      // setStep(StepsEnum.closeEyes);
       setNoColor();
-      clearTimeout(timer);
+      return clearTimeout(timer);
     };
   }, [step]);
 
