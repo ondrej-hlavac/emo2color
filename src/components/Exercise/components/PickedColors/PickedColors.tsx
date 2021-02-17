@@ -6,9 +6,10 @@ import { ConfirmColorButton } from 'components/styled/atoms/ColorConfirmButton';
 
 interface IProps {
   confirmColor: () => void;
+  step: string;
 }
 
-const PickedColors = ({ confirmColor }: IProps) => {
+const PickedColors = ({ confirmColor, step }: IProps) => {
   const { currentColor, addExerciseColor } = useContext(ColorsContext);
 
   const addColor = (color: string) => {
@@ -22,6 +23,7 @@ const PickedColors = ({ confirmColor }: IProps) => {
 
   return (
     <StyledPickedColors>
+      <span className="step">{step}</span>
       <div
         style={{
           backgroundColor: currentColor,
@@ -31,10 +33,7 @@ const PickedColors = ({ confirmColor }: IProps) => {
         }}
       />
       {currentColor !== '#ffffff' && (
-        <ConfirmColorButton
-          style={{ position: 'absolute', top: '30%', left: 'calc' }}
-          onClick={() => addColor(currentColor)}
-        >
+        <ConfirmColorButton onClick={() => addColor(currentColor)}>
           confirm color
         </ConfirmColorButton>
       )}

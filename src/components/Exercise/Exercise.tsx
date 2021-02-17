@@ -23,10 +23,10 @@ export enum StepsEnum {
   letEmotionFadeAway = 'letEmotionFadeAway',
 }
 
-type TimerType = ReturnType<typeof setTimeout>;
+type TimerType = ReturnType<typeof setTimeout> | number;
 
 const Exercise = () => {
-  let timer: ReturnType<typeof setTimeout> | any;
+  let timer: TimerType;
   const { setCurrentColor } = useContext(ColorsContext);
   const [step, setStep] = useState(StepsEnum.closeEyes);
 
@@ -47,15 +47,18 @@ const Exercise = () => {
           setNoColor();
           return setStep(StepsEnum.closeEyes);
       }
-    }, 4000);
-    return () => clearTimeout(timer);
+    }, 5500);
+    return () => {
+      setStep(StepsEnum.closeEyes);
+      setNoColor();
+      clearTimeout(timer);
+    };
   }, [step]);
 
   return (
     <StyledExercisePage>
       <Headline>Exercise</Headline>
-      <span>{step}</span>
-      <PickedColors confirmColor={colorConfirmed} />
+      <PickedColors confirmColor={colorConfirmed} step={step} />
       <ColorPicker />
     </StyledExercisePage>
   );

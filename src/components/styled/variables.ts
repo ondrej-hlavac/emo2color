@@ -18,5 +18,5 @@ export const variables: IVariables = {
       rgba(252, 176, 69, 1) 100%
     );`,
 
-  BOT_NAV_HEIGHT: '90px',
-}
+  BOT_NAV_HEIGHT: '82px',
+};

@@ -51,23 +51,6 @@ h5 {
   color: white;
 }
 
-.color-picker-palette {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  align-items: center;
-  width: 100%;
-  height: 50vh;
-  padding: 20px 10px;
-  background-color: black;
-}
-
-@media screen and (min-width: 560px) {
-  .color-picker-palette {
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-  }
-}
-
 ::-moz-selection {
   /* Code for Firefox */
   color: red;

@@ -9,4 +9,9 @@ export const StyledPickerButton = styled.button`
   margin: auto;
   border: ${BORDER_WIDTH} solid #000;
   background-color: #000;
+  overflow: hidden;
+
+  @media screen and (max-width: 765px) {
+    height: 40px;
+  }
 `;
